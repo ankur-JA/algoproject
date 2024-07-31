@@ -31,7 +31,7 @@ The Basic Wallet Balance Checker is a decentralized application (dApp) that allo
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/algoproject.git
+    git clone https://github.com/ankur-JA/algoproject.git
     cd algoproject
     ```
 

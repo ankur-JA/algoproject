@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "Algo-project-contracts"
+version = "0.1.0"
+description = "Algorand smart contracts"
+authors = ["Ankur Raj <rajankur1802@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+algokit-utils = "^2.3.0"
+python-dotenv = "^1.0.0"
+algorand-python = "^1.0.0"
+algorand-python-testing = "^0.2.1"
+
+[tool.poetry.group.dev.dependencies]
+puyapy = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

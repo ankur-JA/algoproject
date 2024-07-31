@@ -1,45 +1,104 @@
-# Algo-project
+# Basic Wallet Balance Checker
 
-This starter full stack project has been generated using AlgoKit. See below for default getting started instructions.
+## Project Description
 
-## Setup
+The Basic Wallet Balance Checker is a decentralized application (dApp) that allows users to check their Algorand wallet balance. This project demonstrates how to connect to Algorand's blockchain and interact with it using smart contracts and a user-friendly interface.
 
-### Initial setup
-1. Clone this repository to your local machine.
-2. Ensure [Docker](https://www.docker.com/) is installed and operational. Then, install `AlgoKit` following this [guide](https://github.com/algorandfoundation/algokit-cli#install).
-3. Run `algokit project bootstrap all` in the project directory. This command sets up your environment by installing necessary dependencies, setting up a Python virtual environment, and preparing your `.env` file.
-4. In the case of a smart contract project, execute `algokit generate env-file -a target_network localnet` from the `Algo-project-contracts` directory to create a `.env.localnet` file with default configuration for `localnet`.
-5. To build your project, execute `algokit project run build`. This compiles your project and prepares it for running.
-6. For project-specific instructions, refer to the READMEs of the child projects:
-   - Smart Contracts: [Algo-project-contracts](projects/Algo-project-contracts/README.md)
-   - Frontend Application: [Algo-project-frontend](projects/Algo-project-frontend/README.md)
+## Features
 
-> This project is structured as a monorepo, refer to the [documentation](https://github.com/algorandfoundation/algokit-cli/blob/main/docs/features/project/run.md) to learn more about custom command orchestration via `algokit project run`.
+- **Connect Algorand Wallet**: Users can connect their Algorand wallets to the application.
+- **Display Wallet Balance**: Users can view their wallet balance directly within the application.
+- **Basic UI**: Provides a simple user interface for connecting the wallet and displaying the balance.
 
-### Subsequently
+## Key Components
 
-1. If you update to the latest source code and there are new dependencies, you will need to run `algokit project bootstrap all` again.
-2. Follow step 3 above.
+- **Wallet Integration**: Enables users to connect their Algorand wallets.
+- **Balance Display**: Retrieves and shows the user's wallet balance.
+- **User Interface**: A simple interface for connecting the wallet and displaying the balance.
 
-## Tools
+## Getting Started
 
-This project makes use of Python and React to build Algorand smart contracts and to provide a base project configuration to develop frontends for your Algorand dApps and interactions with smart contracts. The following tools are in use:
+### Prerequisites
 
-- Algorand, AlgoKit, and AlgoKit Utils
-- Python dependencies including Poetry, Black, Ruff or Flake8, mypy, pytest, and pip-audit
-- React and related dependencies including AlgoKit Utils, Tailwind CSS, daisyUI, use-wallet, npm, jest, playwright, Prettier, ESLint, and Github Actions workflows for build validation
+- **Algorand SDK**: Ensure you have the Algorand SDK installed.
+- **Node.js**: Required for running the frontend application.
+- **Python**: Required for the smart contract.
 
-### VS Code
+### Installation
 
-It has also been configured to have a productive dev experience out of the box in [VS Code](https://code.visualstudio.com/), see the [backend .vscode](./backend/.vscode) and [frontend .vscode](./frontend/.vscode) folders for more details.
+#### Backend (Smart Contract)
 
-## Integrating with smart contracts and application clients
+1. **Clone the repository:**
 
-Refer to the [Algo-project-contracts](projects/Algo-project-contracts/README.md) folder for overview of working with smart contracts, [projects/Algo-project-frontend](projects/Algo-project-frontend/README.md) for overview of the React project and the [projects/Algo-project-frontend/contracts](projects/Algo-project-frontend/src/contracts/README.md) folder for README on adding new smart contracts from backend as application clients on your frontend. The templates provided in these folders will help you get started.
-When you compile and generate smart contract artifacts, your frontend component will automatically generate typescript application clients from smart contract artifacts and move them to `frontend/src/contracts` folder, see [`generate:app-clients` in package.json](projects/Algo-project-frontend/package.json). Afterwards, you are free to import and use them in your frontend application.
+    ```bash
+    git clone https://github.com/yourusername/algoproject.git
+    cd algoproject
+    ```
 
-The frontend starter also provides an example of interactions with your HelloWorldClient in [`AppCalls.tsx`](projects/Algo-project-frontend/src/components/AppCalls.tsx) component by default.
+2. **Install Python dependencies:**
 
-## Next Steps
+    ```bash
+    pip install py-algorand-sdk
+    ```
 
-You can take this project and customize it to build your own decentralized applications on Algorand. Make sure to understand how to use AlgoKit and how to write smart contracts for Algorand before you start.
+3. **Deploy the smart contract:**
+
+    Navigate to the smart contract directory and follow the instructions in the `smart_contract/README.md` to deploy the contract.
+
+#### Frontend
+
+1. **Navigate to the frontend directory:**
+
+    ```bash
+    cd frontend
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3. **Start the frontend application:**
+
+    ```bash
+    npm start
+    ```
+
+## Usage
+
+1. **Connect Wallet**: Open the frontend application and connect your Algorand wallet using the provided interface.
+2. **Check Balance**: Once connected, the application will display your wallet balance.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch:
+
+    ```bash
+    git checkout -b feature/YourFeature
+    ```
+
+3. Make your changes and commit:
+
+    ```bash
+    git commit -am 'Add new feature'
+    ```
+
+4. Push to the branch:
+
+    ```bash
+    git push origin feature/YourFeature
+    ```
+
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [Algorand Developer Documentation](https://developer.algorand.org/docs/)
+- [Algorand SDK for Python](https://github.com/algorand/py-algorand-sdk)
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
